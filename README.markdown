@@ -6,16 +6,16 @@ Using ActiveRecord validation utilitites is difficult if you do not have a table
 
 <pre>
   <code>
-    gem sources -a http://gems.github.com
-    sudo gem install neerajdotname-active_record_no_table
+ gem sources -a http://gems.github.com
+ sudo gem install neerajdotname-active_record_no_table
   </code>
 </pre>
 
 <pre>
   <code>
-        config.gem "neerajdotname-active_record_no_table", 
-                    :lib => active_record_no_table',
-                    :source => 'http://gems.github.com'                                        
+config.gem "neerajdotname-active_record_no_table", 
+           :lib => active_record_no_table',
+           :source => 'http://gems.github.com'                                        
   </code>
 </pre>
 
@@ -24,15 +24,15 @@ Using ActiveRecord validation utilitites is difficult if you do not have a table
 
 <pre>
   <code>
-    class User < ActiveRecord::NoTable
-      validates_presence_of :name
-      attr_accessor :name
-    end
+class User < ActiveRecord::NoTable
+   validates_presence_of :name
+   attr_accessor :name
+end
 
-    >> user = User.new
-    >> user.valid?
-    >> user.errors.full_messages
-    >> ["Name can't be blank"]
+>> user = User.new
+>> user.valid?
+>> user.errors.full_messages
+>> ["Name can't be blank"]
   </code>
 </pre>  
 
