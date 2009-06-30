@@ -6,8 +6,8 @@ Using ActiveRecord validation utilitites is difficult if you do not have a table
 
 <pre>
   <code>
- gem sources -a http://gems.github.com
- sudo gem install neerajdotname-active_record_no_table
+gem sources -a http://gems.github.com
+sudo gem install neerajdotname-active_record_no_table
   </code>
 </pre>
 
