@@ -3,30 +3,6 @@ $:.unshift(File.dirname(__FILE__)) unless
 
 require 'rubygems'
 
-if Rails.version >= "2.3.0"
-  module ActiveRecord
-    class NoTable
-      include Validateable_2_3
-    end
-  end
-
-elsif Rails.version >= '2.2.0' 
-  module ActiveRecord
-    class NoTable
-      include Validateable_2_2
-    end
-  end
-
-elsif Rails.version >= '2.1.0'
-  module ActiveRecord
-    class NoTable
-      include Validateable_2_1
-    end
-  end
-
-else
-  raise 'this plugin only works with Rails 2.1.x and higher'
-end
 
 module Validateable_2_1
   [:save, :save!, :update_attribute].each{|attr| define_method(attr){}}
@@ -157,4 +133,29 @@ module Validateable_2_3
        I18n.translate(defaults.shift, options.merge(:default => defaults, :scope => [:activerecord, :attributes]))
      end
    end
+end
+
+if Rails.version >= "2.3.0"
+  module ActiveRecord
+    class NoTable
+      include Validateable_2_3
+    end
+  end
+
+elsif Rails.version >= '2.2.0' 
+  module ActiveRecord
+    class NoTable
+      include Validateable_2_2
+    end
+  end
+
+elsif Rails.version >= '2.1.0'
+  module ActiveRecord
+    class NoTable
+      include Validateable_2_1
+    end
+  end
+
+else
+  raise 'this plugin only works with Rails 2.1.x and higher'
 end
