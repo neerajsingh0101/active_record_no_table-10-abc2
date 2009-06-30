@@ -2,6 +2,8 @@
 
 Using ActiveRecord validation utilitites is difficult if you do not have a table for your model. This gem makes it easy to use validation tools even if the model does not have a corresponding table. 
 
+This gem works with Rails 2.1 and higher.
+
 == How to install
 
 <pre>
@@ -35,7 +37,6 @@ end
 >> ["Name can't be blank"]
   </code>
 </pre>  
-
 
 == Feedback
 
