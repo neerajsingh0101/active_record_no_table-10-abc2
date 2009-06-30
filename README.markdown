@@ -1,8 +1,8 @@
 == Introduction
 
-This is a gem to 
+Using ActiveRecord validation utilitites is difficult if you do not have a table for your model. This gem makes it easy to use validation tools even if the model does not have a corresponding table. 
 
-== How to install this gem 
+== How to install
 
 <pre>
   <code>
@@ -11,12 +11,30 @@ This is a gem to
   </code>
 </pre>
 
+<pre>
+  <code>
+        config.gem "neerajdotname-active_record_no_table", 
+                    :lib => active_record_no_table',
+                    :source => 'http://gems.github.com'                                        
+  </code>
+</pre>
+
+
 == How to use this gem
 
-class User < ActiveRecord::NoTable
-  validates_presence_of :name
-  attr_accessor :name
-end
+<pre>
+  <code>
+    class User < ActiveRecord::NoTable
+      validates_presence_of :name
+      attr_accessor :name
+    end
+
+    >> user = User.new
+    >> user.valid?
+    >> user.errors.full_messages
+    >> ["Name can't be blank"]
+  </code>
+</pre>  
 
 
 == Feedback
