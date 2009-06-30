@@ -1,5 +1,9 @@
 
 
+=== 0.0.3 2009-06-31
+
+* fixing the bug regarding rails 2.3.x 
+
 === 0.0.2 2009-06-31
 
 * fixing the bug regarding rails 2.1.x 

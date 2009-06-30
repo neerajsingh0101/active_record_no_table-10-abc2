@@ -103,7 +103,7 @@ module Validateable_2_3
   end
  
   module ClassMethods
-     def self_and_descendents_from_active_record
+     def self_and_descendants_from_active_record
        klass = self
        classes = [klass]
        while klass != klass.base_class
@@ -115,7 +115,7 @@ module Validateable_2_3
      end
  
      def human_name(options = {})
-       defaults = self_and_descendents_from_active_record.map do |klass|
+       defaults = self_and_descendants_from_active_record.map do |klass|
          :"#{klass.name.underscore}"
        end
        defaults << self.name.humanize
@@ -123,7 +123,7 @@ module Validateable_2_3
      end
  
      def human_attribute_name(attribute_key_name, options = {})
-       defaults = self_and_descandants_from_active_record.map do |klass|
+       defaults = self_and_descendants_from_active_record.map do |klass|
          :"#{klass.name.underscore}.#{attribute_key_name}"
        end
        defaults << options[:default] if options[:default]
