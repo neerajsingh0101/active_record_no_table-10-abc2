@@ -26,15 +26,20 @@ config.gem "neerajdotname-active_record_no_table",
 
 <pre>
   <code>
-class User < ActiveRecord::NoTable
-   validates_presence_of :name
-   attr_accessor :name
+class Contact  < ActiveRecord::NoTable
+  attr_accessor :name, :email, :body, :subject
+  validates_presence_of :name, :email, :body
+  validates_format_of   :email,     
+                        :with => Format::EMAIL,
+                        :message => "^The email address is not valid. Please enter a valid email address.",
+                        :if => Proc.new { |record| record.email.not_blank?}   
 end
 
->> user = User.new
->> user.valid?
->> user.errors.full_messages
->> ["Name can't be blank"]
+# in controller
+@contact  = Contact.new(params[:contact])
+if @contact.valid?
+  ...
+end
   </code>
 </pre>  
 

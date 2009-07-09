@@ -6,6 +6,12 @@ require 'rubygems'
 
 module Validateable_2_1
   [:save, :save!, :update_attribute].each{|attr| define_method(attr){}}
+  
+  def initialize(options={})
+    options.each do |k,v|
+      self.send(k.to_s+'=',v) rescue nil
+    end
+  end
 
   def method_missing(symbol, *params)
     if(symbol.to_s =~ /(.*)_before_type_cast$/)
@@ -32,6 +38,12 @@ end
 module Validateable_2_2
 
   [:save, :save!, :update_attribute].each{|attr| define_method(attr){}}
+  
+  def initialize(options={})
+    options.each do |k,v|
+      self.send(k.to_s+'=',v) rescue nil
+    end
+  end
  
   def method_missing(symbol, *params)
     if(symbol.to_s =~ /(.*)_before_type_cast$/)
@@ -85,6 +97,12 @@ end
 module Validateable_2_3
 
   [:save, :save!, :update_attribute].each{|attr| define_method(attr){}}
+  
+  def initialize(options={})
+    options.each do |k,v|
+      self.send(k.to_s+'=',v) rescue nil
+    end
+  end
  
   def method_missing(symbol, *params)
     if(symbol.to_s =~ /(.*)_before_type_cast$/)
@@ -99,7 +117,6 @@ module Validateable_2_3
  
     base.send :include, ActiveSupport::Callbacks
     base.define_callbacks *ActiveRecord::Validations::VALIDATIONS
- 
   end
  
   module ClassMethods
