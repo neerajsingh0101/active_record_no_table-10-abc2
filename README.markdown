@@ -40,7 +40,15 @@ end
 if @contact.valid?
   ...
 end
-  </code>
+
+# using script_console
+>> c = Contact.new
+=> #<Contact:0x39a966c>
+>> c.valid?
+=> false
+>> c.errors.full_messages
+=> ["Please enter your name", "Please enter the message that you want to send", "Please enter your email address"]
+</code>
 </pre>  
 
 == Feedback
