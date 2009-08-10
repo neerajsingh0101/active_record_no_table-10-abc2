@@ -55,6 +55,10 @@ end
 
 Email me: neerajdotname [at] gmail (dot) com
 
+== Author Blog
+
+www.neeraj.name
+
 == License
 
 MIT
