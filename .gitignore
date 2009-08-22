@@ -13,3 +13,4 @@ public/cities
 public/events
 public/users
 db/*.sqlite3
+*.swp

@@ -56,6 +56,10 @@ end
 
 Email me: neerajdotname [at] gmail (dot) com
 
+## source code
+
+[http://github.com/neerajdotname/active_record_no_table/tree/master](http://github.com/neerajdotname/active_record_no_table/tree/master)
+
 ## Author Blog
 
 [http://www.neeraj.name](http://www.neeraj.name)
