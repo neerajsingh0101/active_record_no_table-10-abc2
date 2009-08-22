@@ -1,10 +1,12 @@
-== Introduction
+# active_record_no_table
+
+## Introduction
 
 Using ActiveRecord validation utilitites is difficult if you do not have a table for your model. This gem makes it easy to use validation tools even if the model does not have a corresponding table. 
 
 This gem works with Rails 2.1 and higher.
 
-== How to install
+## How to install
 
 <pre>
   <code>
@@ -21,8 +23,7 @@ config.gem "neerajdotname-active_record_no_table",
   </code>
 </pre>
 
-
-== How to use this gem
+## How to use this gem
 
 <pre>
   <code>
@@ -51,15 +52,15 @@ end
 </code>
 </pre>  
 
-== Feedback
+## Feedback
 
 Email me: neerajdotname [at] gmail (dot) com
 
-== Author Blog
+## Author Blog
 
-www.neeraj.name
+[http://www.neeraj.name](http://www.neeraj.name)
 
-== License
+## License
 
 MIT
 
