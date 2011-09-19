@@ -60,12 +60,9 @@ Email me: neerajdotname [at] gmail (dot) com
 
 [http://github.com/neerajdotname/active_record_no_table/tree/master](http://github.com/neerajdotname/active_record_no_table/tree/master)
 
-## Author Blog
-
-[http://www.neeraj.name](http://www.neeraj.name)
 
 ## License
 
 MIT
 
-Copyright (c) 2009 neerajdotname
+Copyright (c) 2011 BigBinary ( www.BigBinary.com )
